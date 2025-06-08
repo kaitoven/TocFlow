@@ -1,0 +1,106 @@
+/* Container for the article directory */
+.directory-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Directory toggle button */
+.directory-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh; /* 高度设为视口高度 */
+    background-color: rgba(255,255,255,0.65); /* 浅灰色填充背景 */
+    color: #000000; /* 图标或文字为黑色 */
+    padding: 0; /* 移除内边距，确保按钮占满高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 图标在垂直和水平方向居中 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+/* Moved-left class to move the icon to the left side of the directory */
+.directory-toggle.moved-left {
+    right: 300px;  /* 移动到目录的左边 */
+}
+
+/* Icon size */
+.iconify {
+    font-size: 15px;
+}
+
+/* Article directory container */
+.article-directory {
+    background-color: rgba(255,255,255,0.65);
+    width: 300px;
+    height: 100%;
+    box-shadow: -2px 0px 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    transition: right 0.3s ease;
+    padding-top: 50px;
+}
+
+/* Expanded state */
+.directory-expanded .article-directory {
+    right: 0;
+}
+
+/* Directory icon styling when expanded */
+.directory-expanded #toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Directory link styles */
+.article-directory a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    width: auto;
+}
+
+/* Hover effect */
+.article-directory a:hover {
+    background-color: #f0f0f0;
+    color: #7A9C96;
+}
+
+/* Clicked/active effect */
+.article-directory a.active {
+    color: red;
+    font-weight: bold;
+}
+
+/* Active (current) heading link */
+.article-directory a:active {
+    color: red;
+}
+
+/* Main title styling */
+.toc-main-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    text-align: left;
+    padding: 10px 0px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* 目录字样 */
+.toc-label {
+    font-size: 20px;
+    color: #666;
+    margin: 0 0 18px 0px;
+}
