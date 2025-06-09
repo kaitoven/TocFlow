@@ -3,7 +3,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /**
  * Typecho 默认主题以及Jasmine主题文章目录
  * 
- * 详细说明及更新请查阅： <a target="_blank" href="https://github.com/devilchendk/TocFlow" rel="noopener noreferrer">TocFlow</a> 
+ * 详细说明及更新请查阅： <a target="_blank" href="https://github.com/kaitoven/TocFlow" rel="noopener noreferrer">TocFlow</a> 
  * 
  * @package TocFlow
  * @author Kaitoven Chen
