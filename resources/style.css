@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 /* Directory toggle button */
@@ -16,7 +16,7 @@
     right: 0;
     top: 0;
     height: 100vh; /* 高度设为视口高度 */
-    background-color: rgba(255,255,255,0.65); /* 浅灰色填充背景 */
+    background-color: rgba(255,255,255,0.80); /* 浅灰色填充背景 */
     color: #000000; /* 图标或文字为黑色 */
     padding: 0; /* 移除内边距，确保按钮占满高度 */
     display: flex;
@@ -34,21 +34,24 @@
 
 /* Icon size */
 .iconify {
-    font-size: 15px;
+    font-size: 20px;
+    color: #000000
 }
 
 /* Article directory container */
 .article-directory {
-    background-color: rgba(255,255,255,0.65);
+    background-color: rgba(255, 255, 255, 0.9);
     width: 300px;
     height: 100%;
-    box-shadow: -2px 0px 5px rgba(0,0,0,0.1);
+    box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     position: absolute;
     top: 0;
     right: -300px;
     transition: right 0.3s ease;
-    padding-top: 50px;
+    padding-top: 60px;
+    border-left: 4px solid #feae51; /* Add a decorative border */
+    border-radius: 8px 0 0 8px; /* Rounded left corners */
 }
 
 /* Expanded state */
@@ -64,43 +67,50 @@
 /* Directory link styles */
 .article-directory a {
     text-decoration: none;
-    color: #000;
+    color: #2C3E50; /* Darker color for text */
     display: block;
-    padding: 5px 10px;
+    padding: 12px 15px;
     transition: background-color 0.3s, color 0.3s;
-    width: auto;
+    border-bottom: 1px solid #ddd; /* Soft separator between links */
 }
 
 /* Hover effect */
 .article-directory a:hover {
-    background-color: #f0f0f0;
-    color: #7A9C96;
+    background-color: #feae51;
+    color: #FFFFFF;
+    padding-left: 30px; /* Adding left padding on hover for a sliding effect */
 }
 
 /* Clicked/active effect */
 .article-directory a.active {
-    color: red;
+    color: #e74c3c; /* Red color for active link */
     font-weight: bold;
 }
 
 /* Active (current) heading link */
 .article-directory a:active {
-    color: red;
+    color: #e74c3c;
 }
 
 /* Main title styling */
 .toc-main-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 18px;
-    text-align: left;
-    padding: 10px 0px;
-    border-bottom: 2px solid #ddd;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0; /* 取消默认外边距，避免偏移 */
+    text-align: center; /* 水平居中 */
+    padding: 20px 15px;
+    border-bottom: 3px solid #ddd;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
 
 /* 目录字样 */
 .toc-label {
-    font-size: 20px;
-    color: #666;
-    margin: 0 0 18px 0px;
+    font-size: 22px; /* Larger font size for better readability */
+    color: #7f8c8d; /* Softer gray for the label */
+    margin: 0 0 25px;
+    padding-left: 15px;
+    border-left: 4px solid #feae51; /* Add left border for better emphasis */
 }
